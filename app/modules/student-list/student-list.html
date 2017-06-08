@@ -1,0 +1,38 @@
+<div>
+	<div>
+		This template load in the main window.
+		<button type="button" ng-click="vm.callApi()">click callapi</button>
+	</div>
+</div>
+<button ng-click="authenticate('facebook')">Sign in with Facebook</button>
+<button ng-click="authenticate('google')">Sign in with Google</button>
+<button ng-click="authenticate('github')">Sign in with GitHub</button>
+<button ng-click="authenticate('linkedin')">Sign in with LinkedIn</button>
+<button ng-click="authenticate('instagram')">Sign in with Instagram</button>
+<button ng-click="authenticate('twitter')">Sign in with Twitter</button>
+<button ng-click="authenticate('foursquare')">Sign in with Foursquare</button>
+<button ng-click="authenticate('yahoo')">Sign in with Yahoo</button>
+<button ng-click="authenticate('live')">Sign in with Windows Live</button>
+<button ng-click="authenticate('twitch')">Sign in with Twitch</button>
+<button ng-click="authenticate('bitbucket')">Sign in with Bitbucket</button>
+<button ng-click="authenticate('spotify')">Sign in with Spotify</button>
+
+<label for="paramValue">Parameter value:</label>
+  <input id="paramValue" type="text" ng-model="vm.param" ng-change="vm.updateStateParam()"/>
+  <button ng-click="vm.setDefaultParamValue()">Set default value</button>
+  <hr />
+  <a ui-sref="Go to level {{vm.level}}"></a>
+  <p>Current state: <strong ng-bind="$state.$current.name"></strong></p>
+  <p>Location: {{$location.path()}}</p>
+  <ul>
+    <li ng-repeat="stateName in vm.otherStateNames">
+      <a ng-click="vm.goToState(stateName)">Go to state {{stateName}}</a>
+    </li>
+  </ul>
+  <div ui-view="load-two">
+    
+  </div>
+  <div ui-view="load-three">
+    
+  </div>
+
