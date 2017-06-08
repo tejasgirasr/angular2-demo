@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "ERROR: No README data found!",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrent \"nodemon server.js\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "express-jwt": "^5.3.0",
+    "express-session": "^1.15.2",
+    "imap": "^0.8.19",
+    "light-server": "^2.0.1",
+    "mongodb": "^2.2.26",
+    "nodemon": "^1.11.0",
+    "q": "^1.5.0",
+    "sessionstore": "^1.2.18",
+    "yeoman-generator": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0"
+  }
+}

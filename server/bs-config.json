@@ -1,0 +1,11 @@
+{
+  "port": 8001,
+  "files": ["{html,htm,css,js}"],
+  "injectChanges": true,
+  "server": { 
+  	"baseDir": "./app",
+  	"middleware": { "0": null }
+   },
+   "startPath": "server.js",
+  "open":false
+}
